@@ -9,3 +9,4 @@ npm-debug.log
 gatsby-starter-lumen.iml
 .DS_Store
 .env
+worker/

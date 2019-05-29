@@ -11,7 +11,8 @@ async function serveAsset(event) {
   let response = await cache.match(event.request)
 
   if (!response) {
-    response = await fetch(`${BUCKET_URL}${url.pathname}`)
+    const path = url.pathname === '/' ? '/index.html' : url.pathname
+    response = await fetch(`${BUCKET_URL}${path}`)
     const headers = { 'cache-control': 'public, max-age=14400' }
     response = new Response(response.body, { ...response, headers })
     event.waitUntil(cache.put(event.request, response.clone()))

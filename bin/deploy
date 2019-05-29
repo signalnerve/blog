@@ -1,3 +1,4 @@
+gatsby clean
 gatsby build
 source .env
 [ -z "$BUCKET_NAME" ] && echo "BUCKET_NAME environment variable should be set: check .env" && exit 1;
