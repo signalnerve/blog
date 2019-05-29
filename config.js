@@ -3,11 +3,11 @@
 module.exports = {
   url: 'https://www.signalnerve.com',
   title: 'signalnerve',
-  subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+  subtitle: 'Musician and programmer',
   copyright: '© All rights reserved.',
   disqusShortname: '',
   postsPerPage: 4,
-  googleAnalyticsId: 'UA-73379983-2',
+  googleAnalyticsId: 'UA-107917910-15',
   menu: [
     {
       label: 'Articles',
