@@ -5,19 +5,10 @@ addEventListener('fetch', event => {
 const BUCKET_NAME = 'signalnerve'
 const BUCKET_URL = `http://storage.googleapis.com/${BUCKET_NAME}`
 
-async function serveAsset(event) {
+function serveAsset(event) {
   const url = new URL(event.request.url)
-  const cache = caches.default
-  let response = await cache.match(event.request)
-
-  if (!response) {
-    const path = url.pathname === '/' ? '/index.html' : url.pathname
-    response = await fetch(`${BUCKET_URL}${path}`)
-    const headers = { 'cache-control': 'public, max-age=14400' }
-    response = new Response(response.body, { ...response, headers })
-    event.waitUntil(cache.put(event.request, response.clone()))
-  }
-  return response
+  const path = url.pathname === '/' ? '/index.html' : url.pathname
+  return fetch(`${BUCKET_URL}${path}`)
 }
 
 async function handleRequest(event) {

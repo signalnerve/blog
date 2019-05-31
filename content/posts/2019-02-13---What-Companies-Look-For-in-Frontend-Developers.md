@@ -8,6 +8,7 @@ category: 'Career'
 tags:
   - 'Frontend Jobs'
 description: 'To celebrate the launch of my new project Frontend Jobs, I looked at the first three weeks of job postings across many job boards to discover any patterns or trends in what companies are hiring for. The results were pretty illuminating!'
+canonical_url: 'https://blog.byteconf.com/what-companies-are-looking-for-in-2019/'
 ---
 
 ## The frontend development space is hot. According to [Stack Overflow’s 2018 Developer Survey](https://insights.stackoverflow.com/survey/2018/#technology), JavaScript is the most popular programming language with developers around the world.

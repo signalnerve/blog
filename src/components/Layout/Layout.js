@@ -1,24 +1,26 @@
 // @flow
-import React from 'react';
-import Helmet from 'react-helmet';
-import type { Node as ReactNode } from 'react';
-import styles from './Layout.module.scss';
+import React from 'react'
+import Helmet from 'react-helmet'
+import type { Node as ReactNode } from 'react'
+import styles from './Layout.module.scss'
 
 type Props = {
   children: ReactNode,
   title: string,
-  description?: string
-};
+  description?: string,
+  canonicalUrl?: string,
+}
 
-const Layout = ({ children, title, description }: Props) => (
+const Layout = ({ children, title, description, canonicalUrl }: Props) => (
   <div className={styles.layout}>
     <Helmet>
       <html lang="en" />
       <title>{title}</title>
       <meta name="description" content={description} />
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
     </Helmet>
     {children}
   </div>
-);
+)
 
-export default Layout;
+export default Layout

@@ -8,6 +8,7 @@ category: 'Tutorial'
 tags:
   - 'Cloudflare Workers'
 description: "In this tutorial, we'll build a todo list application in HTML, CSS and JavaScript, with a twist: all the data should be stored inside of the newly-launched Workers KV, and the application itself should be served directly from Cloudflare's edge network, using Cloudflare Workers."
+canonical_url: 'https://blog.cloudflare.com/building-a-to-do-list-with-workers-and-kv/'
 ---
 
 In this tutorial, we'll build a todo list application in HTML, CSS and JavaScript, with a twist: all the data should be stored inside of the newly-launched Workers KV, and the application itself should be served directly from Cloudflare's edge network, using Cloudflare Workers.
